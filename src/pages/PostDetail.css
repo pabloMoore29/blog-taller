@@ -1,5 +1,5 @@
 .post-detail {
-  max-width: 800px; /* 👈 más ancho */
+  max-width: 1000px; /* 👈 más ancho */
   margin: 50px auto;
   padding: 40px;
   background-color: var(--card);
