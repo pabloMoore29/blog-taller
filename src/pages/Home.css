@@ -1,6 +1,6 @@
 .home {
   height: 100vh;
-  background-image: url("https://img.goodfon.com/original/2560x1600/1/38/books-literature-knigi-oblozhki.jpg");
+  background-image: url("../assets/literatureWall.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
