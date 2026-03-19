@@ -14,6 +14,9 @@
 .post-detail p {
   font-size: 1.05rem;
   line-height: 1.9; /* 👈 lectura cómoda */
+  white-space: pre-wrap;
+  text-indent: 1.5em; /* 👈 sangría */
+  margin-bottom: 1em;
 }
 
 /* 👇 sangría tipo libro */
