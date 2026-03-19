@@ -17,7 +17,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [user, setUser] = useState(null);
 
-  const adminEmail = "p.ochoa@literatura.com";
+  const adminEmail = "TU_CORREO_AQUI";
   const isAdmin = user?.email === adminEmail;
 
   useEffect(() => {
@@ -50,6 +50,10 @@ function App() {
     setPosts((prevPosts) => [newPost, ...prevPosts]);
   };
 
+  const deletePostFromState = (postId) => {
+    setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId));
+  };
+
   const handleLogout = async () => {
     await signOut(auth);
   };
@@ -63,7 +67,13 @@ function App() {
         <Route path="/posts" element={<Posts posts={posts} />} />
         <Route
           path="/posts/:id"
-          element={<PostDetail posts={posts} isAdmin={isAdmin} />}
+          element={
+            <PostDetail
+              posts={posts}
+              isAdmin={isAdmin}
+              deletePostFromState={deletePostFromState}
+            />
+          }
         />
         <Route
           path="/author/:email"

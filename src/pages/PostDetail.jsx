@@ -6,7 +6,7 @@ import badWords from "../utils/badWords";
 import authors from "../data/authors";
 import "./PostDetail.css";
 
-function PostDetail({ posts, isAdmin }) {
+function PostDetail({ posts, isAdmin, deletePostFromState }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const post = posts.find((item) => item.id === id);
@@ -92,6 +92,7 @@ function PostDetail({ posts, isAdmin }) {
 
     try {
       await deleteDoc(doc(db, "posts", id));
+      deletePostFromState(id);
       navigate("/posts");
     } catch (error) {
       console.error("Error al borrar el post:", error);
