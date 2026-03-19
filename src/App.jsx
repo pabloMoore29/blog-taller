@@ -17,7 +17,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [user, setUser] = useState(null);
 
-  const adminEmail = "TU_CORREO_AQUI";
+  const adminEmail = "p.ochoa@literatura.com";
   const isAdmin = user?.email === adminEmail;
 
   useEffect(() => {

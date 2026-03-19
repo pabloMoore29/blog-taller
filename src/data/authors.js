@@ -1,7 +1,9 @@
+import pabloProfile from "../assets/authors/pabloProfile.jpeg"
+
 const authors = {
   "p.ochoa@literatura.com": {
     name: "Pablo Ochoa Carpinteyro",
-    image: "C:\Users\pablo\OneDrive\Escritorio\Pablo profile.jpeg",
+    image: pabloProfile,
     bio: "Reseña breve"
   },
 
