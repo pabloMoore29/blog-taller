@@ -1,0 +1,97 @@
+.post-detail {
+  padding: 50px 20px;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: var(--card);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.post-detail h1 {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+}
+
+.post-detail p {
+  margin-bottom: 18px;
+  text-align: justify;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+word-break: break-word;
+hyphens: auto;
+white-space: pre-line;
+}
+
+/* 👇 sangría tipo libro */
+.post-detail p + p {
+  text-indent: 1.5em;
+}
+
+.comment {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f0ece6;
+  border-left: 4px solid var(--primary);
+  font-size: 0.95rem;
+}
+
+.comment p {
+  text-indent: 0; /* 👈 clave: evita sangría en comentarios */
+  margin-bottom: 5px;
+}
+
+.comment-form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.comment-form textarea {
+  min-height: 100px;
+}
+
+.comment-form button {
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-comment-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #8c3b2a;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.delete-comment-button:hover {
+  opacity: 0.9;
+}
+
+.delete-post-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  border: none;
+  background-color: #5c2a1d;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.delete-post-button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,65 @@
+.add-text {
+  max-width: 760px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: var(--card);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.add-text h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.add-text p {
+  margin-bottom: 25px;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.add-text-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.add-text-form label {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.add-text-form input,
+.add-text-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d8d1c7;
+  background-color: #fcfaf7;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.add-text-form input:focus,
+.add-text-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.add-text-form textarea {
+  min-height: 260px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.add-text-form button {
+  padding: 14px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-text-form button:hover {
+  opacity: 0.92;
+}
