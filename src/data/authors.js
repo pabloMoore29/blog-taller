@@ -1,7 +1,7 @@
 const authors = {
   "p.ochoa@literatura.com": {
     name: "Pablo Ochoa Carpinteyro",
-    image: "https://via.placeholder.com/150",
+    image: "C:\Users\pablo\OneDrive\Escritorio\Pablo profile.jpeg",
     bio: "Reseña breve"
   },
 
