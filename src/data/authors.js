@@ -1,5 +1,5 @@
 import pabloProfile from "../assets/authors/pabloProfile.jpeg"
-import avatarF from "../assets/authors/avatarF.jpg"
+import avatarF from "../assets/avatarF.jpg"
 
 const authors = {
   "p.ochoa@literatura.com": {
