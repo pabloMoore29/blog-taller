@@ -4,7 +4,7 @@ const authors = {
   "p.ochoa@literatura.com": {
     name: "Pablo Ochoa Carpinteyro",
     image: pabloProfile,
-    bio: "Reseña breve"
+    bio: "músico y estudiante de literatura. Su trabajo se centra en la relación entre música y escritura, con interés en la forma, el ritmo y la construcción del sentido. Actualmente desarrolla textos narrativos y ensayísticos dentro de su formación académica."
   },
 
   "j.lazcano@literatura.com": {
