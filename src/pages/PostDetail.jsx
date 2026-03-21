@@ -6,7 +6,7 @@ import badWords from "../utils/badWords";
 import authors from "../data/authors";
 import "./PostDetail.css";
 
-function PostDetail({ posts, isAdmin, deletePostFromState }) {
+function PostDetail({ posts, isAdmin, deletePostFromState, user }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const post = posts.find((item) => item.id === id);
@@ -26,6 +26,7 @@ function PostDetail({ posts, isAdmin, deletePostFromState }) {
   }
 
   const authorData = authors[post.author];
+  const canEdit = user?.email === post.author;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -103,6 +104,12 @@ function PostDetail({ posts, isAdmin, deletePostFromState }) {
     <div className="post-detail">
       <h1>{post.title}</h1>
 
+      {canEdit && (
+        <Link to={`/edit/${post.id}`} className="edit-post-button">
+          Editar texto
+        </Link>
+      )}
+
       {isAdmin && (
         <button className="delete-post-button" onClick={handleDeletePost}>
           Borrar texto
@@ -118,7 +125,7 @@ function PostDetail({ posts, isAdmin, deletePostFromState }) {
 
       <p><strong>Fecha:</strong> {post.date}</p>
 
-      <p style={{ marginTop: "20px", lineHeight: "1.7" }}>
+      <p style={{ marginTop: "20px", lineHeight: "1.7", whiteSpace: "pre-wrap" }}>
         {post.content}
       </p>
 

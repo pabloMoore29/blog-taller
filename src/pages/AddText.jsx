@@ -6,6 +6,7 @@ import "./AddText.css";
 function AddText({ addPost }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,7 +15,6 @@ function AddText({ addPost }) {
       return;
     }
 
-    // 🔥 Obtener usuario actual
     const user = auth.currentUser;
 
     if (!user) {
@@ -25,7 +25,7 @@ function AddText({ addPost }) {
     const newPost = {
       title: title,
       content: content,
-      author: user.email, // 👈 automático
+      author: user.email,
       date: new Date().toISOString().split("T")[0],
       comments: []
     };
@@ -33,7 +33,6 @@ function AddText({ addPost }) {
     try {
       const docRef = await addDoc(collection(db, "posts"), newPost);
 
-      // 🔹 agregar al estado local
       addPost({
         id: docRef.id,
         ...newPost
@@ -41,6 +40,7 @@ function AddText({ addPost }) {
 
       setTitle("");
       setContent("");
+      setSuccessMessage("Tu texto se ha publicado.");
     } catch (error) {
       console.error("Error al agregar post:", error);
     }
@@ -49,6 +49,7 @@ function AddText({ addPost }) {
   return (
     <div className="add-text">
       <h1>Añadir texto</h1>
+      {successMessage && <p className="success-message">{successMessage}</p>}
 
       <form onSubmit={handleSubmit} className="add-text-form">
         <label>Título</label>
@@ -56,14 +57,20 @@ function AddText({ addPost }) {
           type="text"
           placeholder="Título del texto"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => {
+            setTitle(e.target.value);
+            setSuccessMessage("");
+          }}
         />
 
         <label>Texto</label>
         <textarea
           placeholder="Escribe tu texto aquí..."
           value={content}
-          onChange={(e) => setContent(e.target.value)}
+          onChange={(e) => {
+            setContent(e.target.value);
+            setSuccessMessage("");
+          }}
         ></textarea>
 
         <button type="submit">Publicar</button>

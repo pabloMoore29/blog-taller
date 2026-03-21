@@ -11,6 +11,7 @@ import AddText from "./pages/AddText";
 import PostDetail from "./pages/PostDetail";
 import AuthorDetail from "./pages/AuthorDetail";
 import Login from "./pages/Login";
+import EditPost from "./pages/EditPost";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -72,7 +73,18 @@ function App() {
               posts={posts}
               isAdmin={isAdmin}
               deletePostFromState={deletePostFromState}
+              user={user}
             />
+          }
+        />
+        <Route
+          path="/edit/:id"
+          element={
+            user ? (
+              <EditPost user={user} />
+            ) : (
+              <Login setUser={setUser} />
+            )
           }
         />
         <Route

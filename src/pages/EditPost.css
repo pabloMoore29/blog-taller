@@ -1,0 +1,76 @@
+.edit-post-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.edit-post-page h1 {
+  margin-bottom: 1.5rem;
+  color: #2f2a24;
+}
+
+.edit-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background-color: #fffdf9;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.edit-post-form label {
+  font-weight: 600;
+  color: #3b3128;
+}
+
+.edit-post-form input,
+.edit-post-form textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #d7cfc4;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.edit-post-form textarea {
+  resize: vertical;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.edit-post-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-post-actions button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.edit-post-actions button[type="submit"] {
+  background-color: #8f6b4f;
+  color: white;
+}
+
+.edit-post-actions button[type="submit"]:hover {
+  background-color: #75563f;
+}
+
+.cancel-button {
+  background-color: #d9d1c7;
+  color: #2f2a24;
+}
+
+.cancel-button:hover {
+  background-color: #c9beb1;
+}

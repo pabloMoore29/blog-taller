@@ -92,3 +92,20 @@
 .delete-post-button:hover {
   opacity: 0.9;
 }
+
+.edit-post-button {
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-right: 12px;
+  padding: 10px 16px;
+  background-color: #8f6b4f;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.edit-post-button:hover {
+  background-color: #75563f;
+}
